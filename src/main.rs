@@ -95,6 +95,11 @@ fn main() -> ! {
                 info!("value: {value}");
                 last_value = value;
             }
+            if value % 8 > 3 {
+                led.set_high();
+            } else {
+                led.set_low();
+            }
         });
     }
 }
